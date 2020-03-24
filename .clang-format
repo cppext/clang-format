@@ -1,0 +1,191 @@
+---
+# ref: https://releases.llvm.org/3.4/tools/clang/docs/ClangFormatStyleOptions.html
+# ref: clang/include/clang/Format/Format.h
+# BasedOnStyle (string)
+# The style used for all options not specifically set in the configuration.
+# LLVM, Google, Chromium, Mozilla, WebKit 
+BasedOnStyle: Google
+
+#AccessModifierOffset (int)
+#The extra indent or outdent of access modifiers, e.g. public:.
+AccessModifierOffset: -2
+
+#ConstructorInitializerIndentWidth (unsigned)
+#The number of characters to use for indentation of constructor initializer lists.
+ConstructorInitializerIndentWidth: 4
+
+#AlignEscapedNewlinesLeft (bool)
+#If true, aligns escaped newlines as far left as possible. Otherwise puts them into the right-most column.
+AlignEscapedNewlinesLeft: true
+
+#AlignTrailingComments (bool)
+#If true, aligns trailing comments.
+AlignTrailingComments: false
+
+#AllowAllParametersOfDeclarationOnNextLine (bool)
+#If the function declaration doesn’t fit on a line
+#Allow putting all parameters of a function declaration onto the next line even if BinPackParameters is false.
+AllowAllParametersOfDeclarationOnNextLine: false
+
+#AllowShortIfStatementsOnASingleLine (bool)
+#If true, if (a) return; can be put on a single line.
+AllowShortIfStatementsOnASingleLine: true
+
+#AllowShortLoopsOnASingleLine (bool)
+#If true, while (true) continue; can be put on a single line.
+AllowShortLoopsOnASingleLine: true
+
+#AlwaysBreakBeforeMultilineStrings (bool)
+#If true, always break after the template<...> of a template declaration.
+AlwaysBreakTemplateDeclarations: true
+
+#AlwaysBreakBeforeMultilineStrings (bool)
+#If true, always break before multiline string literals.
+AlwaysBreakBeforeMultilineStrings: false
+
+#BreakBeforeBinaryOperators (bool)
+#If true, binary operators will be placed after line breaks.
+BreakBeforeBinaryOperators: false
+
+#BreakBeforeTernaryOperators (bool)
+#If true, ternary operators will be placed after line breaks.
+BreakBeforeTernaryOperators: false
+
+#BreakConstructorInitializersBeforeComma (bool)
+BreakConstructorInitializersBeforeComma: false
+
+#BinPackParameters (bool)
+#If false, a function declaration’s or function definition’s parameters will either all be on the same line or will have one line each.
+BinPackParameters: false
+
+#ColumnLimit (unsigned)
+#A column limit of 0 means that there is no column limit.
+ColumnLimit: 80
+
+#ConstructorInitializerAllOnOneLineOrOnePerLine (bool)
+#If the constructor initializers don’t fit on a line, put each initializer on its own line.
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
+
+#DerivePointerBinding (bool)
+#If true, analyze the formatted file for the most common binding.
+DerivePointerBinding: true
+
+#ExperimentalAutoDetectBinPacking (bool)
+#If true, clang-format detects whether function calls and definitions are formatted with one parameter per line.
+ExperimentalAutoDetectBinPacking: false
+
+#IndentCaseLabels (bool)
+#Indent case labels one level from the switch statement.
+IndentCaseLabels: true
+
+#MaxEmptyLinesToKeep (unsigned)
+#The maximum number of consecutive empty lines to keep.
+MaxEmptyLinesToKeep: 1
+
+#NamespaceIndentation (NamespaceIndentationKind)
+#The indentation used for namespaces.
+#None: Don’t indent in namespaces.
+#Inner: Indent only in inner namespaces (nested in other namespaces).
+#All: Indent in all namespaces.
+NamespaceIndentation: None
+
+#ObjCSpaceBeforeProtocolList (bool)
+#Add a space in front of an Objective-C protocol list, i.e. use Foo <Protocol> instead of Foo<Protocol>.
+ObjCSpaceBeforeProtocolList: false
+
+#PenaltyBreakBeforeFirstCallParameter (unsigned)
+#The penalty for breaking a function call after call(.
+PenaltyBreakBeforeFirstCallParameter: 1
+
+#PenaltyBreakComment (unsigned)
+#The penalty for each line break introduced inside a comment.
+PenaltyBreakComment: 60
+
+#PenaltyBreakString (unsigned)
+#The penalty for each line break introduced inside a string literal.
+PenaltyBreakString: 1000
+
+#PenaltyBreakFirstLessLess (unsigned)
+#The penalty for breaking before the first <<.
+PenaltyBreakFirstLessLess: 120
+
+#PenaltyExcessCharacter (unsigned)
+#The penalty for each character outside of the column limit.
+PenaltyExcessCharacter: 1000000
+
+#PenaltyReturnTypeOnItsOwnLine (unsigned)
+#Penalty for putting the return type of a function onto its own line.
+PenaltyReturnTypeOnItsOwnLine: 200
+
+#PointerBindsToType (bool)
+#Set whether & and * bind to the type as opposed to the variable.
+PointerBindsToType: true
+
+#SpacesBeforeTrailingComments (unsigned)
+#The number of spaces to before trailing line comments.
+SpacesBeforeTrailingComments: 2
+
+#Cpp11BracedListStyle (bool)
+#If true, format braced lists as best suited for C++11 braced lists.
+Cpp11BracedListStyle: true
+
+#Standard
+#Format compatible with this standard Cpp03 / Cpp11 / Auto
+Standard:        Cpp11
+
+#IndentWidth (unsinged)
+#The number of columns to use for indentation
+IndentWidth:     2
+
+#TabWidth (unsigned)
+#The number of columns used for tab stops.
+TabWidth:        4
+
+#UseTab (UseTabStyle)
+#The way to use tab characters in the resulting file.
+#Never: Never use tab.
+#ForIndentation: Use tabs only for indentation
+#Always: Use tabs whenever we need to fill whitespace that spans at least from one tab stop to the next one.
+UseTab:          Never
+
+#BreakBeforeBraces (BraceBreakingStyle)
+#The brace breaking style to use.
+#Attach: Always attach braces to surrounding context.
+#Linux: class definitions.
+#Stroustrup: Attach, but break before function definitions.
+#Allman: Always break before braces.
+BreakBeforeBraces: Allman
+
+#IndentFunctionDeclarationAfterType (bool)
+#If true, indent when breaking function declarations which are not also definitions after the type.
+IndentFunctionDeclarationAfterType: true
+
+#SpacesInParentheses (bool)
+#If true, spaces will be inserted after '(' and before ')'. 
+SpacesInParentheses: false
+
+#SpacesInAngles (bool)
+#If true, spaces will be inserted after '<' and before '>' in template argument lists
+SpacesInAngles:  false
+
+#SpaceInEmptyParentheses (bool)
+#If false, spaces may be inserted into '()'.
+SpaceInEmptyParentheses: false
+
+#SpacesInCStyleCastParentheses (bool)
+#If false, spaces may be inserted into C style casts.
+SpacesInCStyleCastParentheses: false
+
+#SpaceAfterControlStatementKeyword (bool)
+#If true, spaces will be inserted between 'for'/'if'/'while'/... and '('.
+SpaceAfterControlStatementKeyword: false
+
+#SpaceBeforeAssignmentOperators (bool)
+#If false, spaces will be removed before assignment operators.
+SpaceBeforeAssignmentOperators: true
+
+#ContinuationIndentWidth (unsigned)
+#Indent width for line continuations.
+ContinuationIndentWidth: 4
+...
+
