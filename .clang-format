@@ -35,7 +35,7 @@ AllowShortIfStatementsOnASingleLine: true
 #If true, while (true) continue; can be put on a single line.
 AllowShortLoopsOnASingleLine: true
 
-#AlwaysBreakBeforeMultilineStrings (bool)
+#AlwaysBreakTemplateDeclarations (bool)
 #If true, always break after the template<...> of a template declaration.
 AlwaysBreakTemplateDeclarations: true
 
